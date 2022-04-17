@@ -9,6 +9,6 @@ test('проверка работы функции createNumber', () => {
 });
 
 // test('проверка работы функции createImage', () => {
-// const received = createImage(2);
-// expect(received.includes(2)).toEqual(true);
+// const received = createImage(3);
+// expect(received.includes(3)).toEqual(true);
 // });
