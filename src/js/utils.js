@@ -5,15 +5,20 @@ export function createNumber(number) {
 }
 
 let activeElem;
-export default function createImage(n) {
-  // let activeElem;
+function createImage(n) {
   if (activeElem) {
     activeElem.innerHTML = '';
   }
   const image = new Image();
   image.src = goblin;
+  image.classList.add('image');
   const index = createNumber(n);
-  console.log(index);
   activeElem = document.querySelector(`.element${index}`);
   activeElem.append(image);
 }
+
+function removeImage(elem) {
+  const activeEl = elem.parentElement;
+  activeEl.innerHTML = '';
+}
+export { createImage, removeImage };
