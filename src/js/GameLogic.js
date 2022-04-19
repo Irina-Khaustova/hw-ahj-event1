@@ -26,7 +26,6 @@ export default class GameLogic {
         this.countLose += 1;
       }
       this.flag = false;
-      // createImage(4);
       if (this.countLose >= 5) {
         this.popup.createPopup();
       } else {
