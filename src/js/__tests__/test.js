@@ -13,7 +13,7 @@
 // expect(received.includes(3)).toEqual(true);
 // });
 
-// test('test', () => {
-// const received = 1;
-// expect(received).toEqual(1);
-// });
+test('test', () => {
+  const received = 1;
+  expect(received).toEqual(1);
+});
