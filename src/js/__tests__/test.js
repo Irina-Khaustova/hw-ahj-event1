@@ -1,12 +1,12 @@
-// import createImage from '../utils';
-// import { createNumber } from '../utils';
+// import { createImage } from '../utils';
+import { createNumber } from '../utils';
 // import goblin from '../../img/goblin.png';
 
-// test('проверка работы функции createNumber', () => {
-// const received = Array(16).fill().map((e, i) => i + 1);
-// const expected = createNumber(4);
-// expect(received.includes(expected)).toEqual(true);
-// });
+test('проверка работы функции createNumber', () => {
+  const received = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+  const expected = createNumber(4);
+  expect(received.includes(expected)).toEqual(true);
+});
 
 // test('проверка работы функции createImage', () => {
 // const received = createImage(3);

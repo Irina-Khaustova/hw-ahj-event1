@@ -1,7 +1,7 @@
 import goblin from '../img/goblin.png';
 
 export function createNumber(number) {
-  return Math.floor(Math.random() * (number * number));
+  return Math.floor(Math.random() * ((number * number) - 1));
 }
 
 let activeElem;

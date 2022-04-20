@@ -10,6 +10,8 @@ export default class GameLogic {
     this.listeners();
     this.flag = true;
     this.popup = new Popup();
+    this.hit = document.querySelector('.hit');
+    this.miss = document.querySelector('.miss');
   }
 
   init() {
@@ -24,6 +26,7 @@ export default class GameLogic {
     setTimeout(() => {
       if (this.flag === false) {
         this.countLose += 1;
+        this.miss.innerHTML = `Промахов: ${this.countLose}`;
       }
       this.flag = false;
       if (this.countLose >= 5) {
@@ -32,12 +35,13 @@ export default class GameLogic {
         createImage(4);
         this.movieImage();
       }
-    }, 4000);
+    }, 1000);
   }
 
   clickGame(e) {
     if (e.target.classList.contains('image')) {
       this.countWin += 1;
+      this.hit.innerHTML = `Попаданий: ${this.countWin}`;
       removeImage(e.target);
       this.flag = true;
     }
