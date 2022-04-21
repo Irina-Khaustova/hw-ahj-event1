@@ -24,11 +24,6 @@ export default class GameLogic {
 
   movieImage() {
     setTimeout(() => {
-      if (this.flag === false) {
-        this.countLose += 1;
-        this.miss.innerHTML = `Промахов: ${this.countLose}`;
-      }
-      this.flag = false;
       if (this.countLose >= 5) {
         this.popup.createPopup();
       } else {
@@ -43,7 +38,9 @@ export default class GameLogic {
       this.countWin += 1;
       this.hit.innerHTML = `Попаданий: ${this.countWin}`;
       removeImage(e.target);
-      this.flag = true;
+    } else {
+      this.countLose += 1;
+      this.miss.innerHTML = `Промахов: ${this.countLose}`;
     }
   }
 }
